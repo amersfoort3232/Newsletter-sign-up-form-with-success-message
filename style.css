@@ -1,0 +1,221 @@
+/* CSS reset
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*main CSS starts from here */
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+.container,
+.success {
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+h1,
+p {
+  font-size: 1rem;
+  color: hsl(228, 45%, 44%);
+}
+
+img {
+  width: 400px;
+  height: 591px;
+  border-radius: 0;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-right:2rem;
+}
+
+.form > * {
+  margin: 1rem 0;
+}
+
+ul > * {
+  margin: 1rem 0;
+}
+
+.list li {
+  list-style: url("./assets/assets/images/icon-list.svg");
+}
+
+.label {
+  font-weight: bold;
+  margin: 0;
+  gap: 0;
+}
+
+input[type="email"] {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+.submit-subscribe {
+	background-color:#242742;
+  border-style: none;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius:1rem;
+}
+
+.submit-subscribe:hover {
+  background-color: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
