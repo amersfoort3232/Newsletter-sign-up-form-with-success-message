@@ -134,6 +134,7 @@ table {
 }
 
 /*main CSS starts from here */
+
 @font-face {
   font-family: "Roboto";
   src: url(./assets/fonts/Roboto-Bold.ttf);
@@ -165,6 +166,9 @@ img {
   width: 400px;
   height: 591px;
   border-radius: 0;
+  /*min height set for mobile broswer*/
+  min-width: 300px;
+  min-height: 375px;
 }
 
 .title {
@@ -191,9 +195,11 @@ ul > * {
   margin: 1rem 0;
 }
 
+/* not working */
 .list li {
   list-style: url("./assets/assets/images/icon-list.svg");
 }
+
 
 .label {
   font-weight: bold;
