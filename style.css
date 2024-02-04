@@ -139,6 +139,10 @@ textarea:not([rows]) {
   border-style: none;
 }
 
+.submit-subscribe:hover, .dismiss:hover {
+  background-color: hsl(4, 100%, 67%);
+}
+
 
 /* CSS of response message starts here */
 .success{
