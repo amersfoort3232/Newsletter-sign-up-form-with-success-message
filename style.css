@@ -1,225 +1,230 @@
-/* CSS reset
-*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-html,
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
 body,
-div,
-span,
-applet,
-object,
-iframe,
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 p,
+figure,
 blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
 dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+dd {
+  margin-block-end: 0;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  background-color: #1e1e1e;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: "Roboto", sans-serif;
-}
-ol,
-ul {
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
 }
 
-/*main CSS starts from here */
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./assets/fonts/Roboto-Bold.ttf);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(./assets/fonts/Roboto-Bold.ttf);
-}
-
-.container,
-.success {
-  font-size: 1rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-radius: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap-reverse;
-}
+/* Set shorter line heights on headings and interactive elements */
 h1,
-p {
-  font-size: 1rem;
-  color: hsl(228, 45%, 44%);
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
 }
 
-img {
-  max-width: 25rem;
-  max-height: 37.5rem;
-  border-radius: 0;
-  /*min height set for mobile broswer*/
-}
-.title {
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
 }
 
-.form {
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Main CSS starts here */
+
+.container {
   display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  gap: 1rem;
-  justify-content: space-evenly;
-  text-align: left;
-  margin-right:2rem;
+  flex-direction: column-reverse;
 }
 
-.form > * {
-  margin: 1rem 0;
+.image img {
+  width: 100%;
 }
 
-ul > * {
-  margin: 1rem 0;
+.left-section {
+  padding: 0 1.5rem;
 }
 
-/* not working */
-.list li {
-  list-style: url("./assets/assets/images/icon-list.svg");
-}
-
-
-.label {
+.title {
+  font-size: 2.5rem;
   font-weight: bold;
-  margin: 0;
-  gap: 0;
 }
 
-input[type="email"] {
-  padding: 1rem;
-  margin: 0;
-  font-size: 1.2rem;
+.list {
+  list-style-image: url("./assets/images/icon-list.svg");
+  padding-left: 1.5rem;
 }
-.submit-subscribe {
-	background-color:#242742;
-  border-style: none;
+
+/* "Email Address" */
+.label {
+  font-size: 0.875rem;
+}
+
+/* Input text box */
+.email {
+  width: 100%;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+/* button */
+.submit-subscribe, .dismiss {
+  width: 100%;
   padding: 1rem;
+  margin-top: 1rem;
+  background-color: #242742;
   color: white;
   font-weight: bold;
-  border-radius:1rem;
+  border-radius: 0.5rem;
+  border-style: none;
 }
 
-.submit-subscribe:hover {
-  background-color: hsl(4, 100%, 67%);
-  cursor: pointer;
+
+/* CSS of response message starts here */
+.success{
+  margin-top:3rem;
+  padding:2rem;
+  display:none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.5rem;
+}
+
+.thanks-tick{
+  width: 5rem;
+  height: 5rem;
+}
+
+.dismiss{
+  padding:1rem;
+}
+
+/* End of response message */
+
+.footer {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #36384D;
+  }
+
+  .container {
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 50%;
+  }
+
+  .image img {
+    content: url("./assets/images/illustration-sign-up-desktop.svg");
+    padding: 1rem;
+  }
+
+  .footer {
+    align-self: flex-end;
+    text-align: center;
+  }
+
+  .title{
+    font-size: 4rem;
+  }
+
+  .left-section{
+    padding: 3rem 2rem;
+  }
+
+
+
+  .left-section >ul{
+    padding-left: 2rem;
+  }
+
+  
+
+  .left-section p{
+    font-size: 1.2rem;
+  }
+
+  .success{
+    max-width: 30rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    word-wrap: break-word;
+  }
+
+  .success >.title{
+    margin-top :0;
+  }
+
+
+  
 }
