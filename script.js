@@ -7,3 +7,11 @@ function submit(event) {
 }
 
 document.getElementsByClassName("submit-subscribe")[0].addEventListener("click", submit);
+
+function dismiss(event){
+    event.preventDefault();
+    document.querySelector(".success").style.display = "none";
+    document.querySelector(".container").style.display = "flex";
+}
+
+document.getElementsByClassName("dismiss")[0].addEventListener("click", dismiss);
